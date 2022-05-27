@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Blank Template</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">	
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	</head>
+	<body>
+<header class="border-bottom">
+<div class="container d-flex justify-content-between align-items-center pb-3 pt-3 mb-3 ">
+	<div id="logo" >
+			<img class="" style="width:50px" src="data:image/png;base64,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">
+	</div>
+	<div class="d-flex align-itmes-center" >
+		<div id="countdown"></div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+				<path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+			</svg>
+		
+	</div>
+</div>
+</header>
+	<section  class="container">
+		<div class="d-flex flex-wrap justify-content-center align-items-start gap-3 p-2">
+			<!--START CARD-->
+				<div class="card">
+					<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h3 class="card-title">Essential Starter Kit Tool</h3>
+					  <p class="card-text ">What's inside our Bomb Party™ Essentials Starter Kit?
+						  <ul>
+							<li>Bomb Party Scoop</li>
+							<li>Bomb Party towel</li>
+							<li>Getting Started Guide</li>
+							<li>Custom Bomb Party Towel</li>
+							<li>Professional Party Lens</li>
+							<li>Ring Bomb Party Swag</li>
+							<li>FIVE Original Ring Bombs to party! (One in each size 6-10)</li>
+							<li>Ring Displays and so much more!!</li>
+						  </ul>
+						</p>
+						<a data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<h6 class="fw-bold">View Included Items</h6>
+						  </a> 
+					</div>
+		
+					<ul class="list-group list-group-flush collapse" id="collapse1">
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+						  <div class="ms-2 me-auto">
+							<div class="fw-bold">Original Ring Bomb</div>
+							Size: 6
+						  </div>
+						  <span class="badge bg-primary rounded-pill">1</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+							  <div class="fw-bold">Original Ring Bomb</div>
+							  Size: 7
+							</div>
+							<span class="badge bg-primary rounded-pill">1</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+							  <div class="fw-bold">Original Ring Bomb</div>
+							  Size: 8
+							</div>
+							<span class="badge bg-primary rounded-pill">1</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+							  <div class="fw-bold">Original Ring Bomb</div>
+							  Size: 9
+							</div>
+							<span class="badge bg-primary rounded-pill">1</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+						  <div class="ms-2 me-auto">
+							<div class="fw-bold">Original Ring Bomb</div>
+							Size: 10
+						  </div>
+						  <span class="badge bg-primary rounded-pill">1</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+							<div class="ms-2 me-auto">
+							  <div class="fw-bold">Ring Bomb Starter Kit</div>
+							  -
+							</div>
+							<span class="badge bg-primary rounded-pill">1</span>
+						  </li>
+					  </ul>
+		
+					<div class="card-body">
+						<p>Price:</p><h3>$99.00</h3>
+					</div>
+					<div class="card-body d-flex justify-content-center gap-2">
+							<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+					  <a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+					</div>
+				</div>
+				<!--END CARD-->
+	
+			<!--START CARD-->
+			<div class="card">
+				<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h3 class="card-title">Kids Bomb 5 Pack</h3>
+				  <p class="card-text ">Kids Bomb 5 Pack
+					</p>
+					<a data-bs-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<h6 class="fw-bold">View Included Items</h6>
+					  </a> 
+				</div>
+	
+				<ul class="list-group list-group-flush collapse" id="collapse2">
+					<li class="list-group-item d-flex justify-content-between align-items-start">
+					  <div class="ms-2 me-auto">
+						<div class="fw-bold">Kids Bomb</div>
+						-
+					  </div>
+					  <span class="badge bg-primary rounded-pill">5</span>
+					</li>
+					
+				  </ul>
+	
+				<div class="card-body">
+					<p>Price:</p><h3>$56.05</h3>
+				</div>
+				<div class="card-body d-flex justify-content-center gap-2">
+					<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+			  		<a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+				</div>
+			</div>
+			<!--END CARD-->
+			<!--START CARD-->
+				<div class="card">
+					<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+					<div class="card-body">
+					  <h3 class="card-title">Size 6 Original Ring Bomb (5pack)</h3>
+					  <p class="card-text ">Our Original Ring Bombs are available in ring sizes 6-10 at $19.95 each. Reveal a beautiful custom designed ring in many styles! We design new styles every month. What will you reveal? \n\nNew to Ring Bomb Party? Simply order your correct size for the party of your choice and hop on the LIVE event to watch your gorgeous reveal...let's get fizzy with it!
+						</p>
+						<a data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapseExample">
+							<h6 class="fw-bold">View Included Items</h6>
+						  </a> 
+					</div>
+		
+					<ul class="list-group list-group-flush collapse" id="collapse3">
+						<li class="list-group-item d-flex justify-content-between align-items-start">
+						  <div class="ms-2 me-auto">
+							<div class="fw-bold">Original Ring Bomb</div>
+							Size: 6
+						  </div>
+						  <span class="badge bg-primary rounded-pill">5</span>
+						</li>
+						
+					  </ul>
+		
+					<div class="card-body">
+						<p>Price:</p><h3>$67.30</h3>
+					</div>
+					<div class="card-body d-flex justify-content-center gap-2">
+						<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+				  	<a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+				</div>
+				  </div>
+			<!--END CARD-->
+
+			<!--START CARD-->
+			<div class="card">
+				<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h3 class="card-title">Size 6 Original Ring Bomb (5pack)</h3>
+				  <p class="card-text ">Our Original Ring Bombs are available in ring sizes 6-10 at $19.95 each. Reveal a beautiful custom designed ring in many styles! We design new styles every month. What will you reveal? \n\nNew to Ring Bomb Party? Simply order your correct size for the party of your choice and hop on the LIVE event to watch your gorgeous reveal...let's get fizzy with it!
+					</p>
+					<a data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<h6 class="fw-bold">View Included Items</h6>
+					  </a> 
+				</div>
+	
+				<ul class="list-group list-group-flush collapse" id="collapse3">
+					<li class="list-group-item d-flex justify-content-between align-items-start">
+					  <div class="ms-2 me-auto">
+						<div class="fw-bold">Original Ring Bomb</div>
+						Size: 6
+					  </div>
+					  <span class="badge bg-primary rounded-pill">5</span>
+					</li>
+					
+				  </ul>
+	
+				<div class="card-body">
+					<p>Price:</p><h3>$67.30</h3>
+				</div>
+				<div class="card-body d-flex justify-content-center gap-2">
+					<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+				  <a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+				</div>
+			  </div>
+			<!--END CARD-->
+			<!--START CARD-->
+			<div class="card">
+				<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h3 class="card-title">Size 6 Original Ring Bomb (5pack)</h3>
+				  <p class="card-text ">Our Original Ring Bombs are available in ring sizes 6-10 at $19.95 each. Reveal a beautiful custom designed ring in many styles! We design new styles every month. What will you reveal? \n\nNew to Ring Bomb Party? Simply order your correct size for the party of your choice and hop on the LIVE event to watch your gorgeous reveal...let's get fizzy with it!
+					</p>
+					<a data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<h6 class="fw-bold">View Included Items</h6>
+					  </a> 
+				</div>
+	
+				<ul class="list-group list-group-flush collapse" id="collapse3">
+					<li class="list-group-item d-flex justify-content-between align-items-start">
+					  <div class="ms-2 me-auto">
+						<div class="fw-bold">Original Ring Bomb</div>
+						Size: 6
+					  </div>
+					  <span class="badge bg-primary rounded-pill">5</span>
+					</li>
+					
+				  </ul>
+	
+				<div class="card-body">
+					<p>Price:</p><h3>$67.30</h3>
+				</div>
+				<div class="card-body d-flex justify-content-center gap-2">
+					<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+				  <a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+				</div>
+			  </div>
+			<!--END CARD-->
+			<!--START CARD-->
+			<div class="card">
+				<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h3 class="card-title">Size 6 Original Ring Bomb (5pack)</h3>
+				  <p class="card-text ">Our Original Ring Bombs are available in ring sizes 6-10 at $19.95 each. Reveal a beautiful custom designed ring in many styles! We design new styles every month. What will you reveal? \n\nNew to Ring Bomb Party? Simply order your correct size for the party of your choice and hop on the LIVE event to watch your gorgeous reveal...let's get fizzy with it!
+					</p>
+					<a data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<h6 class="fw-bold">View Included Items</h6>
+					  </a> 
+				</div>
+	
+				<ul class="list-group list-group-flush collapse" id="collapse3">
+					<li class="list-group-item d-flex justify-content-between align-items-start">
+					  <div class="ms-2 me-auto">
+						<div class="fw-bold">Original Ring Bomb</div>
+						Size: 6
+					  </div>
+					  <span class="badge bg-primary rounded-pill">5</span>
+					</li>
+					
+				  </ul>
+	
+				<div class="card-body">
+					<p>Price:</p><h3>$67.30</h3>
+				</div>
+				<div class="card-body d-flex justify-content-center gap-2">
+					<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+				  <a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+				</div>
+			  </div>
+			<!--END CARD-->
+			<!--START CARD-->
+			<div class="card">
+				<img src="https://images.unsplash.com/photo-1653367963903-ba0d38d3843c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h3 class="card-title">Size 6 Original Ring Bomb (5pack)</h3>
+				  <p class="card-text ">Our Original Ring Bombs are available in ring sizes 6-10 at $19.95 each. Reveal a beautiful custom designed ring in many styles! We design new styles every month. What will you reveal? \n\nNew to Ring Bomb Party? Simply order your correct size for the party of your choice and hop on the LIVE event to watch your gorgeous reveal...let's get fizzy with it!
+					</p>
+					<a data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<h6 class="fw-bold">View Included Items</h6>
+					  </a> 
+				</div>
+	
+				<ul class="list-group list-group-flush collapse" id="collapse3">
+					<li class="list-group-item d-flex justify-content-between align-items-start">
+					  <div class="ms-2 me-auto">
+						<div class="fw-bold">Original Ring Bomb</div>
+						Size: 6
+					  </div>
+					  <span class="badge bg-primary rounded-pill">5</span>
+					</li>
+					
+				  </ul>
+	
+				<div class="card-body">
+					<p>Price:</p><h3>$67.30</h3>
+				</div>
+				<div class="card-body d-flex justify-content-center gap-2">
+					<input placeholder="1" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+				  <a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
+				</div>
+			  </div>
+			<!--END CARD-->  
+		</div>	
+	</section>	
+
+	 <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="staticBackdropLabel">Adding to Cart</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		  <img class="d-block m-auto"  src="img/icons8-shopping-cart.gif">
+		  <p class="m-5 f-center">Attempting to add product(s) to cart...</p>
+		</div>
+		<div class="modal-body">
+		  
+		</div>
+	  </div>
+	</div>
+  </div>
+	 <!-- Modal -->
+  
+ 
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+
+	
+</html>
