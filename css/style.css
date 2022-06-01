@@ -41,10 +41,6 @@ footer {
 /* ADDITIONAL STYLES
 /*******************************************/
 
-.card {
-  max-width: 300px;
-}
-
 .base-timer {
   position: relative;
   width: 50px;
