@@ -155,9 +155,6 @@ function onTimesUp() {
   clearInterval(timerInterval);
 }
 
-function alertTimesUp() {
-    alert('Times up!')
-}
 
 function startTimer() {
   timerInterval = setInterval(() => {
@@ -171,7 +168,6 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
-      alertTimesUp();
     }
   }, 1000);
 }
