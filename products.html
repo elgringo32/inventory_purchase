@@ -13,7 +13,9 @@
 		<link rel="stylesheet" href="css/style.css">	
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-	</head>
+<script src="https://kit.fontawesome.com/8ddf5858c4.js" crossorigin="anonymous"></script>
+
+</head>
 	<body>
 <header class="border-bottom mb-3">
 <div class="container d-flex justify-content-between align-items-center pb-3 pt-3 mb-3 ">
@@ -65,46 +67,52 @@
 						</p>
 					</div>
 					<div class="card-body">
-						<button class="btn btn-outline-primary mb-4" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
+						<button class="btn btn-outline-primary mb-5" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
 							Select Items To Purchase
 						</button> 
 
-						<div class="list-group collapse" id="collapse1">
+						<div class="list-group container" id="collapse1">
 							<div class="list-group-item list-group-item-action" aria-current="true">
-							  <div class="d-flex w-100 justify-content-between">
-								<div><small>Size: </small><h5 class="mb-1">SMALL</h5></div>
-								<div>$8.00</div>
+								<div class="row row-cols-xs-1 row align-items-center justify-content-between">
+							  <div class="col-sm-1 col-md-5">
+									<div><small>Size: </small><h5 class="mb-3">SMALL</h5></div>
+							  <div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
+								</div>
+								<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+								<div class="input-group-append">
+									<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
+								</div>
+								</div>
+								<p class="mb-1"><small>Input number of items you want to add to cart.</small></p>
 							  </div>
-							  <input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-							  <p class="mb-1"></p>
-							  <small>Input number of items you want to add to cart.</small>
+							  <div class="col-sm-1 col-md-4">
+								<h4>Wholesale:$8.00</h4>
+								<small>Retail: $16.00</small>
+							  </div>
+							</div>
 							</div>
 							<div class="list-group-item list-group-item-action" aria-current="true">
-								<div class="d-flex w-100 justify-content-between">
-								  <div><small>Size:</small><h5 class="mb-1">MEDIUM</h5></div>
-								  <div>$8.00</div>
+								<div class="row row-cols-xs-1 row align-items-center justify-content-between">
+							  <div class="col-sm-1 col-md-5">
+									<div><small>Size: </small><h5 class="mb-3">SMALL</h5></div>
+							  <div class="input-group mb-2">
+								<div class="input-group-prepend">
+									<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
 								</div>
-								<input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-								<p class="mb-1"></p>
-								<small>Input number of items you want to add to cart.</small>
+								<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+								<div class="input-group-append">
+									<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
+								</div>
+								</div>
+								<p class="mb-1"><small>Input number of items you want to add to cart.</small></p>
+							  </div>
+							  <div class="col-sm-1 col-md-4">
+								<h4>Wholesale:$8.00</h4>
+								<small>Retail: $16.00</small>
+							  </div>
 							</div>
-							<div class="list-group-item list-group-item-action" aria-current="true">
-								<div class="d-flex w-100 justify-content-between">
-								  <div><small>Size:</small><h5 class="mb-1">LARGE</h5></div>
-								  <div>$8.00</div>
-								</div>
-								<input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-								<p class="mb-1"></p>
-								<small>Input number of items you want to add to cart.</small>
-							</div>
-							<div class="list-group-item list-group-item-action" aria-current="true">
-								<div class="d-flex w-100 justify-content-between">
-								  <div><small>Size:</small><h5 class="mb-1">X-LARGE</h5></div>
-								  <div>$8.00</div>
-								</div>
-								<input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-								<p class="mb-1"></p>
-								<small>Input number of items you want to add to cart.</small>
 							</div>
 						
 						<div class="card-body">
@@ -151,42 +159,48 @@
 									<li>XL 14-16</li>	
 								</ul>
 								</p>
-							<div class="list-group-item list-group-item-action" aria-current="true">
-							  <div class="d-flex w-100 justify-content-between">
-								<div><small>Size:</small><h5 class="mb-1">SMALL</h5></div>
-								<div>$8.00</div>
-							  </div>
-							  <input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-							  <p class="mb-1"></p>
-							  <small>Input number of items you want to add to cart.</small>
-							</div>
-							<div class="list-group-item list-group-item-action" aria-current="true">
-								<div class="d-flex w-100 justify-content-between">
-								  <div><small>Size:</small><h5 class="mb-1">MEDIUM</h5></div>
-								  <div>$8.00</div>
+								<div class="list-group-item list-group-item-action" aria-current="true">
+									<div class="row row-cols-xs-1 row align-items-center justify-content-between">
+								  <div class="col-sm-1 col-md-5">
+										<div><small>Size: </small><h5 class="mb-3">SMALL</h5></div>
+								  <div class="input-group mb-2">
+									<div class="input-group-prepend">
+										<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
+									</div>
+									<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+									<div class="input-group-append">
+										<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
+									</div>
+									</div>
+									<p class="mb-1"><small>Input number of items you want to add to cart.</small></p>
+								  </div>
+								  <div class="col-sm-1 col-md-4">
+									<h4>Wholesale:$8.00</h4>
+									<small>Retail: $16.00</small>
+								  </div>
 								</div>
-								<input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-								<p class="mb-1"></p>
-								<small>Input number of items you want to add to cart.</small>
-							</div>
-							<div class="list-group-item list-group-item-action" aria-current="true">
-								<div class="d-flex w-100 justify-content-between">
-								  <div><small>Size:</small><h5 class="mb-1">LARGE</h5></div>
-								  <div>$8.00</div>
 								</div>
-								<input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-								<p class="mb-1"></p>
-								<small>Input number of items you want to add to cart.</small>
-							</div>
-							<div class="list-group-item list-group-item-action" aria-current="true">
-								<div class="d-flex w-100 justify-content-between">
-								  <div><small>Size:</small><h5 class="mb-1">X-LARGE</h5></div>
-								  <div>$8.00</div>
+								<div class="list-group-item list-group-item-action" aria-current="true">
+									<div class="row row-cols-xs-1 row align-items-center justify-content-between">
+								  <div class="col-sm-1 col-md-5">
+										<div><small>Size: </small><h5 class="mb-3">SMALL</h5></div>
+								  <div class="input-group mb-2">
+									<div class="input-group-prepend">
+										<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
+									</div>
+									<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+									<div class="input-group-append">
+										<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
+									</div>
+									</div>
+									<p class="mb-1"><small>Input number of items you want to add to cart.</small></p>
+								  </div>
+								  <div class="col-sm-1 col-md-4">
+									<h4>Wholesale:$8.00</h4>
+									<small>Retail: $16.00</small>
+								  </div>
 								</div>
-								<input placeholder="0" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-								<p class="mb-1"></p>
-								<small>Input number of items you want to add to cart.</small>
-							</div>
+								</div>
 						
 						<div class="card-body">
 							<p>Total Price:</p><h3>$0.00</h3>
