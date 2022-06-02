@@ -111,12 +111,7 @@ function updateQuantityPlus() {
   const inputNode = this.parentElement.previousElementSibling
   inputNode.value++
   
-  let priceDisplay = document.querySelector(`[data-product-price-id="${inputNode.dataset.productId}"]`)
-  let itemPrice = document.querySelector(`[data-item-id="${inputNode.dataset.itemId}"][data-item-details="price"]`)
-  let totalPrice =  Number(priceDisplay.innerHTML) + Number(itemPrice.innerText)
-  console.log(priceDisplay.innerHTML)
-  console.log(totalPrice)
-  priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
+  updateProductPricing(inputNode, this)
   
 }
 
@@ -129,13 +124,35 @@ for (buttonMinus of allMinusButtons) {
 
 function updateQuantityMinus() {
   const inputNode = this.parentElement.nextElementSibling
-  if(inputNode.value > 1) {
+  if(inputNode.value >= 1) {
     inputNode.value--
+    updateProductPricing(inputNode, this)
+
   } else {
     inputNode.value = 0
   }
   
 }
+
+function updateProductPricing(inputNode, button) {
+  let priceDisplay = document.querySelector(`[data-product-price-id="${inputNode.dataset.productId}"]`)
+  let itemPrice = document.querySelector(`[data-item-id="${inputNode.dataset.itemId}"][data-item-details="price"]`)
+if (button.classList.contains('button-plus')) {
+  let totalPrice =  Number(priceDisplay.innerHTML) + Number(itemPrice.innerText)
+  console.log(priceDisplay.innerHTML)
+  console.log(totalPrice)
+  priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
+} else {
+  console.log(priceDisplay.innerHTML)
+  let totalPrice =  Number(priceDisplay.innerHTML) - Number(itemPrice.innerText)
+  console.log(priceDisplay.innerHTML)
+  console.log(totalPrice)
+  priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
+}
+
+ 
+}
+
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
