@@ -94,11 +94,11 @@
 //   findAllUniq([1,0,2,0,0])
 
 
-// const buttons = document.querySelectorAll('.btn')
-// for (let button of buttons) {
-//     button.setAttribute('data-bs-toggle',"modal")
-//     button.setAttribute('data-bs-target',"#staticBackdrop")
-// }
+const buttons = document.querySelectorAll('.add-to-cart-btn')
+for (let button of buttons) {
+    button.setAttribute('data-bs-toggle',"modal")
+    button.setAttribute('data-bs-target',"#staticBackdrop")
+}
 
 
 const FULL_DASH_ARRAY = 283;
