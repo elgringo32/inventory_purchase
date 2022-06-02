@@ -71,7 +71,7 @@
 							Select Items To Purchase
 						</button> 
 
-						<div class="list-group container" id="collapse1">
+						<div data-product-id="1" class="list-group container" id="collapse1">
 							<div class="list-group-item list-group-item-action" aria-current="true">
 								<div class="row row-cols-xs-1 row align-items-center justify-content-between">
 							  <div class="col-sm-1 col-md-5">
@@ -80,15 +80,15 @@
 								<div class="input-group-prepend">
 									<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
 								</div>
-								<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+								<input data-product-id="1" data-item-id="1" placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
 								<div class="input-group-append">
 									<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
 								</div>
 								</div>
 								<p class="mb-1"><small>Input number of items you want to add to cart.</small></p>
 							  </div>
-							  <div class="col-sm-1 col-md-4">
-								<h4>Wholesale:$8.00</h4>
+							  <div class="col-sm-1 col-md-3">
+								<h4>Wholesale: $<span data-item-details="price" data-item-id="1">8.00</span></h4>
 								<small>Retail: $16.00</small>
 							  </div>
 							</div>
@@ -96,27 +96,27 @@
 							<div class="list-group-item list-group-item-action" aria-current="true">
 								<div class="row row-cols-xs-1 row align-items-center justify-content-between">
 							  <div class="col-sm-1 col-md-5">
-									<div><small>Size: </small><h5 class="mb-3">SMALL</h5></div>
+									<div><small>Size: </small><h5 class="mb-3">MEDIUM</h5></div>
 							  <div class="input-group mb-2">
 								<div class="input-group-prepend">
 									<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
 								</div>
-								<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+								<input data-product-id="1" data-item-id="2" placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
 								<div class="input-group-append">
 									<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
 								</div>
 								</div>
 								<p class="mb-1"><small>Input number of items you want to add to cart.</small></p>
 							  </div>
-							  <div class="col-sm-1 col-md-4">
-								<h4>Wholesale:$8.00</h4>
-								<small>Retail: $16.00</small>
+							  <div class="col-sm-1 col-md-3">
+								<h4>Wholesale: $<span data-item-details="price" data-item-id="2">16.00</span></h4>
+								<small>Retail: $32.00</small>
 							  </div>
 							</div>
 							</div>
 						
-						<div class="card-body">
-							<p>Total Price:</p><h3>$0.00</h3>
+						<div  class="card-body">
+							<p>Total Price: </p><h3>$<span data-product-price-id="1">0.00</span></h3>
 						</div>
 						<div class="card-body d-flex justify-content-start gap-2">			
 						<a href="#" class="btn btn-primary text-nowrap">Add to Cart</a>
@@ -167,7 +167,7 @@
 									<div class="input-group-prepend">
 										<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
 									</div>
-									<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+									<input data-item-id='1' placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
 									<div class="input-group-append">
 										<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
 									</div>
@@ -183,12 +183,12 @@
 								<div class="list-group-item list-group-item-action" aria-current="true">
 									<div class="row row-cols-xs-1 row align-items-center justify-content-between">
 								  <div class="col-sm-1 col-md-5">
-										<div><small>Size: </small><h5 class="mb-3">SMALL</h5></div>
+										<div><small>Size: </small><h5 class="mb-3">MEDIUM</h5></div>
 								  <div class="input-group mb-2">
 									<div class="input-group-prepend">
 										<button type="button" class="button-minus btn btn-outline-secondary"><i class="fa-solid fa-minus"></i></button>
 									</div>
-									<input placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
+									<input data-product-id="2" placeholder="0" type="text" class="form-control" aria-label="quantity input with increment/decrement buttons">
 									<div class="input-group-append">
 										<button type="button" class="button-plus btn btn-outline-secondary"><i class="fa-solid fa-plus"></i></button>
 									</div>

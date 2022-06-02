@@ -101,6 +101,42 @@ for (let button of buttons) {
 }
 
 
+const allPlusButtons = document.querySelectorAll('.button-plus')
+for (buttonPlus of allPlusButtons) {
+  buttonPlus.addEventListener('click',updateQuantityPlus)
+}
+
+
+function updateQuantityPlus() {
+  const inputNode = this.parentElement.previousElementSibling
+  inputNode.value++
+  
+  let priceDisplay = document.querySelector(`[data-product-price-id="${inputNode.dataset.productId}"]`)
+  let itemPrice = document.querySelector(`[data-item-id="${inputNode.dataset.itemId}"][data-item-details="price"]`)
+  let totalPrice =  Number(priceDisplay.innerHTML) + Number(itemPrice.innerText)
+  console.log(priceDisplay.innerHTML)
+  console.log(totalPrice)
+  priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
+  
+}
+
+
+const allMinusButtons = document.querySelectorAll('.button-minus')
+for (buttonMinus of allMinusButtons) {
+  buttonMinus.addEventListener('click',updateQuantityMinus)
+}
+
+
+function updateQuantityMinus() {
+  const inputNode = this.parentElement.nextElementSibling
+  if(inputNode.value > 1) {
+    inputNode.value--
+  } else {
+    inputNode.value = 0
+  }
+  
+}
+
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -215,4 +251,5 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
 
