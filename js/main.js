@@ -93,65 +93,49 @@
 
 //   findAllUniq([1,0,2,0,0])
 
-
 const buttons = document.querySelectorAll('.add-to-cart-btn')
 for (let button of buttons) {
     button.setAttribute('data-bs-toggle',"modal")
     button.setAttribute('data-bs-target',"#staticBackdrop")
 }
 
-
 const allPlusButtons = document.querySelectorAll('.button-plus')
 for (buttonPlus of allPlusButtons) {
   buttonPlus.addEventListener('click',updateQuantityPlus)
 }
 
-
 function updateQuantityPlus() {
   const inputNode = this.parentElement.previousElementSibling
   inputNode.value++
-  
   updateProductPricing(inputNode, this)
-  
 }
-
 
 const allMinusButtons = document.querySelectorAll('.button-minus')
 for (buttonMinus of allMinusButtons) {
   buttonMinus.addEventListener('click',updateQuantityMinus)
 }
 
-
 function updateQuantityMinus() {
   const inputNode = this.parentElement.nextElementSibling
   if(inputNode.value >= 1) {
     inputNode.value--
     updateProductPricing(inputNode, this)
-
   } else {
     inputNode.value = 0
   }
-  
 }
 
 function updateProductPricing(inputNode, button) {
   let priceDisplay = document.querySelector(`[data-product-price-id="${inputNode.dataset.productId}"]`)
   let itemPrice = document.querySelector(`[data-item-id="${inputNode.dataset.itemId}"][data-item-details="price"]`)
-if (button.classList.contains('button-plus')) {
-  let totalPrice =  Number(priceDisplay.innerHTML) + Number(itemPrice.innerText)
-  console.log(priceDisplay.innerHTML)
-  console.log(totalPrice)
-  priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
-} else {
-  console.log(priceDisplay.innerHTML)
-  let totalPrice =  Number(priceDisplay.innerHTML) - Number(itemPrice.innerText)
-  console.log(priceDisplay.innerHTML)
-  console.log(totalPrice)
-  priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
-}
-
- 
-}
+  if (button.classList.contains('button-plus')) {
+    let totalPrice =  Number(priceDisplay.innerHTML) + Number(itemPrice.innerText)
+    priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
+  } else {
+    let totalPrice =  Number(priceDisplay.innerHTML) - Number(itemPrice.innerText)
+    priceDisplay.innerHTML= `${totalPrice.toFixed(2)}`
+  }
+ }
 
 
 const FULL_DASH_ARRAY = 283;
